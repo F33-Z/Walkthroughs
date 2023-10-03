@@ -26,6 +26,7 @@ We got `sar2HTML` string and after searching we found that this is a CMS, this C
 
 ## Initial Access
 Since this is the version 3.2.1, it is vulnerable to [Remote Command Execution](https://www.exploit-db.com/exploits/47204)
+
 ![image](https://github.com/F33-Z/Walkthroughs/assets/73140750/8286fe94-3695-43ac-8f37-99da53df91bc)
 
 After understanding the exploit, I applied it on our machine : and yes we got the output of `id` after clicking on the `host`
@@ -35,6 +36,7 @@ After understanding the exploit, I applied it on our machine : and yes we got th
 To get an Initial Access to the webserver, we will be be getting a reverse shell from [this](https://www.revshells.com/) website, the reverse shell that i chose is `nc mkfifo` and i set the IP ADDRESS and the port
 
 I used Burpsuite so i can encode my payload by clicking `CTRL+u`
+
 ![image](https://github.com/F33-Z/Walkthroughs/assets/73140750/f4a1ff9b-8092-4770-9312-20ad71f04904)
 
 
