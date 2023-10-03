@@ -46,6 +46,7 @@ dirsearch -u http://[IP-ADDRESS]
 ![image](https://github.com/F33-Z/Walkthroughs/assets/73140750/08dac75a-24d6-4303-b016-d38be75fd47d)
 
 we did find a login page in the /admin page :
+
 ![image](https://github.com/F33-Z/Walkthroughs/assets/73140750/202c4e3e-fe1a-461f-af83-4fb47c6b6a4b)
 
 Trying the credentials to login it and also some default credentials like admin:admin, admin:password still we failed to login as admin
