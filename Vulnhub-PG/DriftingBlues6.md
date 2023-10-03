@@ -72,6 +72,7 @@ nc -nlvp 8888
 and YES we got INITIAL ACCESS!
 
 To get a meterpreter shell which is more stable i used the module `web-delivery` that exist in metasploit
+
 ![image](https://github.com/F33-Z/Walkthroughs/assets/73140750/2a81bc72-23da-4323-99ac-1431e4848cc4)
 
 
