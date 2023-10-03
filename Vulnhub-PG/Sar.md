@@ -92,7 +92,8 @@ within 5 min we goot a response in the netcat listener!
 
 and Guess what we are GROOT!!
 
-![Uploading image.png…]()
+![image](https://github.com/F33-Z/Walkthroughs/assets/73140750/f8e8152f-27e5-464f-9ea9-1e4715a0395c)
+
 
 
 
