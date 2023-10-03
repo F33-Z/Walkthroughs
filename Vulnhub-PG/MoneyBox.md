@@ -112,7 +112,7 @@ doing so i got a access with priviliges of the user lily,
 
 ![image](https://github.com/F33-Z/Walkthroughs/assets/73140750/ad9026e8-0fd7-462e-865e-d01d0fda4fd1)
 
-running the command `sudo -l` shows that i can run the command perl with sudo permissions without password, using the {GTFObins](https://gtfobins.github.io/gtfobins/perl/#sudo) website i can run this command to get root privileges :
+running the command `sudo -l` shows that i can run the command perl with sudo permissions without password, using the [GTFObins](https://gtfobins.github.io/gtfobins/perl/#sudo) website i can run this command to get root privileges :
 
 ```bash
 sudo perl -e 'exec "/bin/sh";'
