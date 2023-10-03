@@ -52,12 +52,36 @@ we did find a login page in the /admin page:
 Trying the credentials to login it and also some default credentials like admin:admin, admin:password still we failed to login as admin
 after checking the /admin/logs directory :
 
-![image](https://github.com/F33-Z/Walkthroughs/assets/73140750/115b68ca-bfc0-485a-aad3-2c95adfc7c2b)
+![image](https://github.com/F33-Z/Walkthroughs/assets/73140750/92fcb0b4-437a-46c6-bce4-7ebfbddbcfb8)
+
+
 these files indicated that there was a change in the password of the admin user.
 
 ### Port 22 - SSH
 Since the version of this service wasn't old and it didnt had any known vulnerabilities, the only thing i tried was to log in to ssh using the credentials we found earlier admin:potato but it failed
 
 ### Initial access
+After being in a rabbit-hole for a bit, trying to use the credentials i found, and i kept throwing them everywhere there is a login, I went back to the code where there is the code that handled the login, there was a function called `strcmp`, after searching little bit about this function, i found that I can bypass the login since it is a vulnerable function,
+You can read more about it in this [writeup](https://www.doyler.net/security-not-included/bypassing-php-strcmp-abctf2016)
+
+![image](https://github.com/F33-Z/Walkthroughs/assets/73140750/e9e49072-06c9-4f35-a93c-9672b8a86820)
+
+So i used this payload to bypass the login using Burpsuite :
+```php
+username[]=%22%22&password[]=%22%22
+```
+![image](https://github.com/F33-Z/Walkthroughs/assets/73140750/0a65821d-5e3d-4b40-a2eb-2faba5f4df47)
+
+As you can see we got a message that say welcome, which means we successfully bypassed the authentication, 
+
+while nevigating though the application, and while trying to download some log files i noticed there was a `file` parameter, i was able to see it using burpsuite, so i tried some LFI payloads and indeed i got the content of /etc/passwd
+
+![image](https://github.com/F33-Z/Walkthroughs/assets/73140750/0a29c444-2882-4149-9ea1-2c57491c6412)
+
+
+
+
+
+
 
 ### Privilege Escalation
