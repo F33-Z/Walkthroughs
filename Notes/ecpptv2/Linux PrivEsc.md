@@ -1,6 +1,6 @@
 # Linux privesc
 
-- [ ] ##Privilege Escalation - Kernel Exploits
+- [ ] ## Privilege Escalation - Kernel Exploits
 - Download `linux-exploit-suggester.sh` script: `/linux-exploit-suggester/linux-exploit-suggester.sh`
 - Compile and run `dirtycow` exploit:
 ```bash
@@ -10,7 +10,7 @@ gcc -pthread /home/user/tools/dirtycow/c0w.c -o c0w
 - Change password: `passwd`
 - Check user privileges: `id`
 
-- [ ] **Privilege Escalation - Stored Passwords (Config Files)**
+## Privilege Escalation - Stored Passwords (Config Files)**
 - View VPN configuration: `cat /home/user/myvpn.ovpn`
 - Note the "auth-user-pass" directive value in the config.
 - View OpenVPN auth file: `cat /etc/openvpn/auth.txt`
