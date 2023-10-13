@@ -1,6 +1,6 @@
 # Linux privesc
 
-- [ ] **Privilege Escalation - Kernel Exploits**
+- [ ] ##Privilege Escalation - Kernel Exploits
 - Download `linux-exploit-suggester.sh` script: `/linux-exploit-suggester/linux-exploit-suggester.sh`
 - Compile and run `dirtycow` exploit:
 ```bash
