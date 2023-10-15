@@ -34,3 +34,17 @@ Stabilizing the shell with metasploit :
 
 
 ## Privilege Escalation
+running linpeas :
+
+![image](https://github.com/F33-Z/Walkthroughs/assets/73140750/64a7a8ec-5f66-40a7-a90f-1179c938b085)
+
+exploiting SUID `time` :
+![image](https://github.com/F33-Z/Walkthroughs/assets/73140750/f90bb145-b3f7-41cf-a747-a1ab7e9b370c)
+
+
+
+
+
+
+
+
