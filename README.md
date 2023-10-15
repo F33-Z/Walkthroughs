@@ -5,7 +5,7 @@ here are the machines that i have solved :
 | Name             | Difficulty by platform | Difficulty by community | Walkthrough             |
 |------------------|------------------------|--------------------------|-------------------------|
 | [Potato](Walkthroughs/Vulnhub-PG
-/Potato.md)            | Easy                   | Easy                    | Yes                     |
+/Potato.md) | Easy                   | Easy                    | Yes                     |
 | DriftingBlues6 | Easy                   | Easy                    |     Yes                    |
 | Sar                | Easy                   | Easy                    |       Yes                  |
 | MoneyBox     | Easy                   | Easy                    |               Yes          |
