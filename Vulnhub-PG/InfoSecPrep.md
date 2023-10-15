@@ -33,5 +33,6 @@ linpeas result :
 
 many Attack vectors : Bash SUID
 
-![image](https://github.com/F33-Z/Walkthroughs/assets/73140750/f9a517fc-bcee-4fe1-9d70-118a0894b083)
+![image](https://github.com/F33-Z/Walkthroughs/assets/73140750/5ea89881-071f-4bc4-b293-ef02dfb86cf7)
+
 
