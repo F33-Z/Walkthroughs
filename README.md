@@ -4,7 +4,7 @@ here are the machines that i have solved :
 # Proving Ground ( Play ) / VulnHub
 | Name             | Difficulty by platform | Difficulty by community | Walkthrough             |
 |------------------|------------------------|--------------------------|-------------------------|
-| [Potato](Vulnhub-PG
+| [Potato](Walkthroughs/Vulnhub-PG
 /Potato.md)            | Easy                   | Easy                    | Yes                     |
 | DriftingBlues6 | Easy                   | Easy                    |     Yes                    |
 | Sar                | Easy                   | Easy                    |       Yes                  |
