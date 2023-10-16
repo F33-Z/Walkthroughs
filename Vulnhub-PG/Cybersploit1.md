@@ -1,4 +1,4 @@
-![image](https://github.com/F33-Z/Walkthroughs/assets/73140750/6964164b-abff-404c-b847-e2b0e6a6048a)# Cybersploit1 Walkthrough
+# Cybersploit1 Walkthrough
 
 ## port scanning
 
